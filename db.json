@@ -1,0 +1,20 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "name": "Estudar Javascript"
+    },
+    {
+      "id": 2,
+      "name": "Estudar React"
+    },
+    {
+      "id": 3,
+      "name": "Estudar Angular"
+    },
+    {
+      "id": 4,
+      "name": "Estudar CSS"
+    }
+  ]
+}

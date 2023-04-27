@@ -1,0 +1,13 @@
+body {
+  background: #4A5759;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #2F4550;
+  --secondary-color: #90B494;
+  --tertiary-color: #718F94;
+}

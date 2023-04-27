@@ -1,0 +1,27 @@
+.container {
+  align-items: center;
+  background: var(--tertiary-color);
+  border-radius: 5px;
+  color: var(--secondary-color);
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: space-between;
+  min-width: 300px;
+}
+
+.container button {
+  background: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  transition: all .5s ease;
+  width: 40px;
+}
+
+.container button:hover {
+  cursor: pointer;
+  opacity: .8;
+}
