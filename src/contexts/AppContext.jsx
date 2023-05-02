@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import { api } from "../services/service";
 
 const taskInitValues = [];
 
@@ -7,16 +8,11 @@ export const AppContext = createContext({});
 export const AppContextProvider = ({ children }) => {
   const [tasks, setTasks] = useState(taskInitValues);
 
-  const getTasks = () => {
-    fetch("http://localhost:3001/tasks").then((response) =>
-      setTasks(response.data)
-    );
-  };
-
-  useEffect(() => {
-    console.log("Chamou")
-    getTasks;
-  }, []);
+    useEffect(() => {
+        api.get("/tasks").then(response => {setTasks(response.data)
+          console.log('teste: ',response.data)
+        })
+    }, [])
 
   return (
     <AppContext.Provider value={{ tasks, setTasks }}>

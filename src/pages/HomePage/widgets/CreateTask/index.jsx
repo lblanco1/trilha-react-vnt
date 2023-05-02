@@ -1,24 +1,21 @@
 import { useState } from "react";
 import styles from "./CreateTask.module.css";
 import { useAppContext } from "../../../../hooks/useAppContext";
+import { api } from "../../../../services/service";
 
 const CreateTask = () => {
   const { setTasks } = useAppContext();
   const [taskName, setTaskName] = useState("");
 
-  const handleSubmit = (event) => {
+  async function handleSubmit(event) {
     event.preventDefault();
-
-    setTaskName("");
-
-    setTasks((prev) => [
-      ...prev,
-      {
-        id: prev.length + 1,
-        name: taskName,
-      },
-    ]);
-  };
+    console.log('chamou o metodo')
+    const { data: newTask } = await api.post("/tasks", {
+       name: taskName
+    })
+    setTasks(prev => [...prev, newTask])
+    setTaskName("")
+ }
 
   return (
     <div className={styles.container}>

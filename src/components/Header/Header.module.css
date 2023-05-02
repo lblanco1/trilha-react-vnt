@@ -3,14 +3,14 @@
   display: grid;
   height: 80px;
   place-items: center;
-  width: 100vw;
+  width: 100%;
 }
 
 .content {
   color: var(--secondary-color);
   display: flex;
   justify-content: space-between;
-  width: min(100%, 1365px);
+  width: min(90%, 1365px);
 }
 
 .content h3 span {

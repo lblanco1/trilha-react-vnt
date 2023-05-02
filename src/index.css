@@ -1,13 +1,18 @@
 body {
-  background: #4A5759;
-  box-sizing: border-box;
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
+  background: #00537e;
+  background: -moz-linear-gradient(to bottom, #00537e 0%, #3aa17e 100%);
+  background: -webkit-linear-gradient(to bottom, #00537e 0%, #3aa17e 100%);
+  background: linear-gradient(to bottom, #00537e 0%, #3aa17e 100%);
+  background-size: 100% 100vh;
+  background-repeat: no-repeat;
 }
 
+
 :root {
-  --primary-color: #2F4550;
-  --secondary-color: #90B494;
-  --tertiary-color: #718F94;
+  --primary-color: #2f4550;
+  --secondary-color: #ffffff;
+  --tertiary-color: #1d454570;
+  --black-color: #000000;
 }
+
+

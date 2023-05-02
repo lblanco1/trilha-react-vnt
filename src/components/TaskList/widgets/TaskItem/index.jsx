@@ -1,12 +1,14 @@
 import styles from "./TaskItem.module.css";
 
 import { useAppContext } from "../../../../hooks/useAppContext";
+import { api } from "../../../../services/service";
 
 const TaskItem = ({ name, id }) => {
   const { setTasks } = useAppContext();
 
-  const handleRemove = () => {
-    if (confirm("Deseja remover este item")) {
+  async function handleRemove() {
+    if (confirm(`Tem certeza que deseja remover o item ${name}?`)) {
+      await api.delete(`/tasks/${id}`);
       setTasks((tasks) => tasks.filter((task) => task.id !== id));
     }
   };
